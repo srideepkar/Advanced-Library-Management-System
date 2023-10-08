@@ -9,53 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Advance_Library_Management_Application
 build_property.RootNamespace = Advance_Library_Management_Application
-build_property.ProjectDir = D:\Projects\Advanced-Library-Management-Application\Library Management MVC\
+build_property.ProjectDir = D:\Projects\Advanced-Library-Management-System\Library Management MVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Projects\Advanced-Library-Management-Application\Library Management MVC
+build_property.MSBuildProjectDirectory = D:\Projects\Advanced-Library-Management-System\Library Management MVC
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Projects/Advanced-Library-Management-Application/Library Management MVC/Views/Category/Add.cshtml]
+[D:/Projects/Advanced-Library-Management-System/Library Management MVC/Views/Category/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Advanced-Library-Management-Application/Library Management MVC/Views/Category/Delete.cshtml]
+[D:/Projects/Advanced-Library-Management-System/Library Management MVC/Views/Category/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Advanced-Library-Management-Application/Library Management MVC/Views/Category/Edit.cshtml]
+[D:/Projects/Advanced-Library-Management-System/Library Management MVC/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Advanced-Library-Management-Application/Library Management MVC/Views/Category/Index.cshtml]
+[D:/Projects/Advanced-Library-Management-System/Library Management MVC/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Advanced-Library-Management-Application/Library Management MVC/Views/Home/Index.cshtml]
+[D:/Projects/Advanced-Library-Management-System/Library Management MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Advanced-Library-Management-Application/Library Management MVC/Views/Home/Privacy.cshtml]
+[D:/Projects/Advanced-Library-Management-System/Library Management MVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Advanced-Library-Management-Application/Library Management MVC/Views/Shared/Error.cshtml]
+[D:/Projects/Advanced-Library-Management-System/Library Management MVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Advanced-Library-Management-Application/Library Management MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Projects/Advanced-Library-Management-System/Library Management MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Advanced-Library-Management-Application/Library Management MVC/Views/_ViewImports.cshtml]
+[D:/Projects/Advanced-Library-Management-System/Library Management MVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Advanced-Library-Management-Application/Library Management MVC/Views/_ViewStart.cshtml]
+[D:/Projects/Advanced-Library-Management-System/Library Management MVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Advanced-Library-Management-Application/Library Management MVC/Views/Shared/_Layout.cshtml]
+[D:/Projects/Advanced-Library-Management-System/Library Management MVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1yhg5btvud

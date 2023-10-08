@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library Management MVC", "Library Management MVC.csproj", "{AA699BDD-5D59-4B1E-977C-F5DA715EAFB9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library LogIn SignUp Portal WebAPI", "..\Library LogIn SignUp Portal WebAPI\Library LogIn SignUp Portal WebAPI.csproj", "{D02CCBF9-CECF-40E4-A34B-987B5F05BF89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AA699BDD-5D59-4B1E-977C-F5DA715EAFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA699BDD-5D59-4B1E-977C-F5DA715EAFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA699BDD-5D59-4B1E-977C-F5DA715EAFB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D02CCBF9-CECF-40E4-A34B-987B5F05BF89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D02CCBF9-CECF-40E4-A34B-987B5F05BF89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D02CCBF9-CECF-40E4-A34B-987B5F05BF89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D02CCBF9-CECF-40E4-A34B-987B5F05BF89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

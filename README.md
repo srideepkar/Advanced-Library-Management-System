@@ -13,7 +13,7 @@ Mostly the project will be based on Dot Net Core MVC with C# and for a few cases
 
 # System Architecture Design (Unfinished)
 
-![image](https://github.com/srideepkar/Advanced-Library-Management-Application/assets/54681888/078f3a6f-f92a-4ea9-9c6a-cad2e9b5d226)
+![image](https://github.com/srideepkar/Advanced-Library-Management-System/assets/54681888/f997e706-e324-4faf-987c-6372e1227204)
 
 
 

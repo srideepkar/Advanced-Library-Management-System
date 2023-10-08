@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library Management MVC", "L
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library LogIn SignUp Portal WebAPI", "..\Library LogIn SignUp Portal WebAPI\Library LogIn SignUp Portal WebAPI.csproj", "{D02CCBF9-CECF-40E4-A34B-987B5F05BF89}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Advance Library Management System", "Advance Library Management System", "{FAEF7D1A-0081-4DB2-B595-C3AF9D1D4292}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AA699BDD-5D59-4B1E-977C-F5DA715EAFB9} = {FAEF7D1A-0081-4DB2-B595-C3AF9D1D4292}
+		{D02CCBF9-CECF-40E4-A34B-987B5F05BF89} = {FAEF7D1A-0081-4DB2-B595-C3AF9D1D4292}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1FA32E3-059B-4D6C-8230-D92CA83A14C6}

@@ -1,0 +1,16 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<Center><h2>Edit an existing book info here..</h2></Center>
+<form method="POST" asp-action="Edit">
+    <label asp-for="BookName">Edit Book name: </label>
+    <input type="text" asp-for="BookName" value=@ViewBag.Book />
+
+    <label asp-for="Available">Edit Book Status: </label>
+    <input type="checkbox" asp-for="Available" />
+
+    <button type="submit">Done</button>
+    <a asp-action="Index" asp-controller="Category">Dashboard</a>
+</form>

@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Delete";
+}
+
+@model Category
+
+<Center><h2>Delete an existing book info here..</h2></Center>
+<form method="POST" asp-action="DeletePost">
+    <input asp-for="Id" hidden />
+    <label asp-for="BookName">Edit Book name: </label>
+    <input type="text" asp-for="BookName" value=@ViewBag.BookName disabled />
+
+    <label asp-for="Available">Edit Book Status: </label>
+    <input type="checkbox" asp-for="Available" value=@ViewBag.BookAvail disabled />
+
+    <button type="submit">Delete</button>
+    <a asp-action="Index" asp-controller="Category">Dashboard</a>
+</form>

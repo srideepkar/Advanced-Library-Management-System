@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model IEnumerable<Category>
+
+<center><h2>Welcome to the Library Managing Application Dashboard!</h2></center>
+<br />
+<br />
+<center>
+<table>
+    <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Book Name
+            </th>
+            <th>
+                Availability
+            </th>
+            <th>
+                Last updated
+            </th>
+            <th>
+                Edit
+            </th>
+            <th>
+                Delete
+            </th>
+    </tr>
+@foreach(var books in Model)
+{
+    <tr>
+        <td>
+            @books.Id
+        </td>
+        <td>
+            @books.BookName
+        </td>
+        <td>
+            @books.Available
+        </td>
+        <td>
+            @books.DateTime
+        </td>
+        <td>
+                    <a asp-controller="Category" asp-action="edit" asp-route-id=@books.Id> Edit </a>
+        </td>
+        <td>
+                    <a asp-controller="Category" asp-action="delete" asp-route-id=@books.Id> Delete </a>
+        </td>
+    </tr>    
+}
+</table>
+    <a asp-controller="Category" asp-action="Add">Add New Book!</a>
+</center>

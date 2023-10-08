@@ -1,0 +1,18 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Add";
+}
+
+<Center><h2>Add New Book Here..</h2></Center>
+<form method="POST">
+    <label asp-for="BookName">Enter Book name: </label>
+    <input type="text" asp-for="BookName" placeholder="New Book Name" />
+
+    <label asp-for="Available">Enter Book Status: </label>
+    <input type="checkbox" asp-for= "Available"/>
+        
+    <button type="submit">Add The book</button>
+
+    <a asp-action="Index" asp-controller="Category">Dashboard</a>
+</form>
+

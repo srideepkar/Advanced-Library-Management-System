@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Advanced-Library-Management-Application\\Library LogIn SignUp Portal WebAPI\\Library LogIn SignUp Portal WebAPI.csproj": {}
+    "D:\\Projects\\Advanced-Library-Management-System\\Library LogIn SignUp Portal WebAPI\\Library LogIn SignUp Portal WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Advanced-Library-Management-Application\\Library LogIn SignUp Portal WebAPI\\Library LogIn SignUp Portal WebAPI.csproj": {
+    "D:\\Projects\\Advanced-Library-Management-System\\Library LogIn SignUp Portal WebAPI\\Library LogIn SignUp Portal WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Advanced-Library-Management-Application\\Library LogIn SignUp Portal WebAPI\\Library LogIn SignUp Portal WebAPI.csproj",
+        "projectUniqueName": "D:\\Projects\\Advanced-Library-Management-System\\Library LogIn SignUp Portal WebAPI\\Library LogIn SignUp Portal WebAPI.csproj",
         "projectName": "Library LogIn SignUp Portal WebAPI",
-        "projectPath": "D:\\Projects\\Advanced-Library-Management-Application\\Library LogIn SignUp Portal WebAPI\\Library LogIn SignUp Portal WebAPI.csproj",
+        "projectPath": "D:\\Projects\\Advanced-Library-Management-System\\Library LogIn SignUp Portal WebAPI\\Library LogIn SignUp Portal WebAPI.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Advanced-Library-Management-Application\\Library LogIn SignUp Portal WebAPI\\obj\\",
+        "outputPath": "D:\\Projects\\Advanced-Library-Management-System\\Library LogIn SignUp Portal WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

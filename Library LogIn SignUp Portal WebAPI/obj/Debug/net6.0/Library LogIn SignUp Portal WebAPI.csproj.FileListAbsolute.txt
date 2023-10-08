@@ -30,3 +30,35 @@ D:\Projects\Advance Library Management System\Library LogIn SignUp Portal WebAPI
 D:\Projects\Advance Library Management System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\Library LogIn SignUp Portal WebAPI.pdb
 D:\Projects\Advance Library Management System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\Library LogIn SignUp Portal WebAPI.genruntimeconfig.cache
 D:\Projects\Advance Library Management System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\ref\Library LogIn SignUp Portal WebAPI.dll
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\bin\Debug\net6.0\appsettings.Development.json
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\bin\Debug\net6.0\appsettings.json
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\bin\Debug\net6.0\Library LogIn SignUp Portal WebAPI.exe
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\bin\Debug\net6.0\Library LogIn SignUp Portal WebAPI.deps.json
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\bin\Debug\net6.0\Library LogIn SignUp Portal WebAPI.runtimeconfig.json
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\bin\Debug\net6.0\Library LogIn SignUp Portal WebAPI.dll
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\bin\Debug\net6.0\Library LogIn SignUp Portal WebAPI.pdb
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\Library LogIn SignUp Portal WebAPI.csproj.AssemblyReference.cache
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\Library LogIn SignUp Portal WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\Library LogIn SignUp Portal WebAPI.AssemblyInfoInputs.cache
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\Library LogIn SignUp Portal WebAPI.AssemblyInfo.cs
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\Library LogIn SignUp Portal WebAPI.csproj.CoreCompileInputs.cache
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\Library LogIn SignUp Portal WebAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\Library LogIn SignUp Portal WebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\staticwebassets\msbuild.Library LogIn SignUp Portal WebAPI.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.Library LogIn SignUp Portal WebAPI.props
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Library LogIn SignUp Portal WebAPI.props
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Library LogIn SignUp Portal WebAPI.props
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\staticwebassets.build.json
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\staticwebassets.development.json
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\scopedcss\bundle\Library LogIn SignUp Portal WebAPI.styles.css
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\Library LogIn SignUp Portal WebAPI.csproj.CopyComplete
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\Library LogIn SignUp Portal WebAPI.dll
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\refint\Library LogIn SignUp Portal WebAPI.dll
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\Library LogIn SignUp Portal WebAPI.pdb
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\Library LogIn SignUp Portal WebAPI.genruntimeconfig.cache
+D:\Projects\Advanced-Library-Management-System\Library LogIn SignUp Portal WebAPI\obj\Debug\net6.0\ref\Library LogIn SignUp Portal WebAPI.dll

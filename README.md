@@ -11,7 +11,24 @@ Mostly the project will be based on Dot Net Core MVC with C# and for a few cases
 1. Working on the LogIn/Sign up page for managers & members based on the Dot net core WebAPI with JWT for authentication part.
 2. Connect the LogIn/SignUp part (webapi) with the library management part (MVC) through API.
 
-# System Architecture Design (Unfinished)
+# System Design:
+**Functional Requirements:**
+- Admin can do anything that can Managers & Members do
+- Managers can add books
+- Managers can remove books
+- Managers can manage (Add/Remove/Update) members
+- Members can borrow books
+- Members can submit books
+- Members can pay fines
+- Members & admin both can search/filter books
+
+**Non-Functional Requirements:**
+ - Scalability
+ - Techstack
+ - Latency
+ - Consistency
+
+**High level Design**
 
 ![image](https://github.com/srideepkar/Advanced-Library-Management-System/assets/54681888/f997e706-e324-4faf-987c-6372e1227204)
 

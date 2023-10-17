@@ -30,7 +30,7 @@ Mostly the project will be based on Dot Net Core MVC with C# and for a few cases
 
 **High level Design**
 
-![image](https://github.com/srideepkar/Advanced-Library-Management-System/assets/54681888/f997e706-e324-4faf-987c-6372e1227204)
+![Library management System](https://github.com/srideepkar/Advanced-Library-Management-System/assets/54681888/bd346e36-7ecb-4a90-ba05-0f4a348f4efd)
 
 
 

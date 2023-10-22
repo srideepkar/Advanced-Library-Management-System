@@ -8,9 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.22" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.22" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.22">
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.23" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.23">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -19,10 +21,6 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Library LogIn SignUp Portal WebAPI\Library LogIn SignUp Portal WebAPI.csproj" />
   </ItemGroup>
 
 </Project>

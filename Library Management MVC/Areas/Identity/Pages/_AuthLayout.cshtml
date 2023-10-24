@@ -1,0 +1,12 @@
+﻿@{
+    Layout = "/View/Shared/_Layout.cshtml";
+}
+    <center>
+        <a class="nav-link" href="/Identity/Account/Login">Log In</a>    
+        <a class="nav-link" href="/Identity/Account/Register">Register</a>
+    </center>
+    <div class="card">@RenderBody()</div>
+    
+    @section Scripts {
+    @await RenderSectionAsync("Scripts", required: false)
+    }

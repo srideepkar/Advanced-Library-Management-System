@@ -3,15 +3,21 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Identity;
 using Advance_Library_Management_Application.Areas.Identity.Data;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")
     ));
+
+var userDbConnectionString = builder.Configuration.GetConnectionString("LibraryApplicationContextConnection");
+builder.Services.AddDbContext<LibraryApplicationContext>(options =>
+    options.UseSqlServer(userDbConnectionString));
 
 builder.Services.AddDefaultIdentity<LibraryApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<LibraryApplicationContext>();
@@ -30,12 +36,14 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthentication();;
+app.UseAuthentication();
 
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Category}/{action=Index}/{id?}");
+    pattern: "{controller=Category}/{action=Index}/{id?}"
+    );
+app.MapRazorPages();
 
 app.Run();

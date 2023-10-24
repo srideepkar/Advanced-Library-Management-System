@@ -19,7 +19,7 @@ var userDbConnectionString = builder.Configuration.GetConnectionString("LibraryA
 builder.Services.AddDbContext<LibraryApplicationContext>(options =>
     options.UseSqlServer(userDbConnectionString));
 
-builder.Services.AddDefaultIdentity<LibraryApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<LibraryApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<LibraryApplicationContext>();
 
 var app = builder.Build();

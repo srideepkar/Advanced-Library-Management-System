@@ -1,5 +1,6 @@
 ﻿using Advance_Library_Management_Application.Data;
 using Advance_Library_Management_Application.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Advance_Library_Management_Application.Controllers
@@ -12,6 +13,7 @@ namespace Advance_Library_Management_Application.Controllers
         {
             _db = db;
         }
+        [Authorize]
         public IActionResult Index()
         {
             IEnumerable<Category> categoryList = _db.Categories;

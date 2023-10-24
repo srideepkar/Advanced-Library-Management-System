@@ -1,11 +1,35 @@
 ﻿@{
-    Layout = "/View/Shared/_Layout.cshtml";
+    Layout = "/Views/Shared/_Layout.cshtml";
 }
-    <center>
-        <a class="nav-link" href="/Identity/Account/Login">Log In</a>    
-        <a class="nav-link" href="/Identity/Account/Register">Register</a>
-    </center>
-    <div class="card">@RenderBody()</div>
+<!-- Adding tab control -->
+<div class="row justify-content-center">
+    <div class="col-5 mt-5">
+        <div class="card login-logout-card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Identity/Account/Login">
+                            Log In
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Identity/Account/Register">
+                            Register
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <div class="col-10 my-4">
+                        <!-- Based on the card body, the content should be shown that is why the render body is used -->
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     
     @section Scripts {
     @await RenderSectionAsync("Scripts", required: false)

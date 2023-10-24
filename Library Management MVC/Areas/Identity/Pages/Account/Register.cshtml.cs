@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using Advance_Library_Management_Application.Areas.Identity.Constants;
 
 namespace Advance_Library_Management_Application.Areas.Identity.Pages.Account
 {
@@ -71,6 +72,35 @@ namespace Advance_Library_Management_Application.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
+            [Required]
+            [Display(Name = "First name")]
+            [DataType(DataType.Text)]
+            public string FirstName { get; set; }
+
+            [Required]
+            [Display(Name = "Last Name")]
+            [DataType(DataType.Text)]
+            public string LastName { get; set; }
+
+            [Required]
+            [DataType(DataType.DateTime)]
+            public DateTime CreatedDate { get; set; } = DateTime.Now;
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Age")]
+            public int Age { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Address")]
+            public string Address { get; set; } = "ABC Road";
+
+            [Required]
+            [Display(Name = "Role")]
+            [DataType(DataType.Text)]
+            public string Roles { get; set; } = "Member";
+
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
@@ -113,14 +143,22 @@ namespace Advance_Library_Management_Application.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
+                //CREATING USER WITH THE USER DATA
                 var user = CreateUser();
-
+                user.FirstName = Input.FirstName;
+                user.LastName = Input.LastName;
+                user.CreatedDate = Input.CreatedDate;
+                user.Address = Input.Address;
+                user.Age = Input.Age;
+                user.Roles = Input.Roles;
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
+                    //ASSIGNING DEFAULT ROLE AS MEMBER TO ALL (THIS WILL BE CHANGED IN FUTURE)
+                    await _userManager.AddToRoleAsync(user, Roles.Member.ToString());
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);

@@ -20,7 +20,18 @@ builder.Services.AddDbContext<LibraryApplicationContext>(options =>
     options.UseSqlServer(userDbConnectionString));
 
 builder.Services.AddDefaultIdentity<LibraryApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<LibraryApplicationContext>();
+
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization();
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+    options.AddPolicy("ManagerOnly", policy => policy.RequireRole("Manager"));
+    options.AddPolicy("MemberOnly", policy => policy.RequireRole("Member"));
+});
 
 var app = builder.Build();
 
@@ -33,9 +44,11 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 app.UseRouting();
+
 app.UseAuthentication();
 
 app.UseAuthorization();
@@ -45,5 +58,12 @@ app.MapControllerRoute(
     pattern: "{controller=Category}/{action=Index}/{id?}"
     );
 app.MapRazorPages();
+
+//THIS CREATES A SCOPE (LIKE A TEMPORARY WORKSPACE) WHO RUNS A METHOD TO SET UP ROLES AND AN ADMIN
+//USER IN THE APPLICATION'S DATABASE
+using (var scope = app.Services.CreateScope())
+{
+    await DbSeeder.SeedRolesAndAdminAsync(scope.ServiceProvider);
+}
 
 app.Run();

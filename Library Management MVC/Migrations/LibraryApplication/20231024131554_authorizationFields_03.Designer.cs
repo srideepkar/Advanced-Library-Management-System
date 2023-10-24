@@ -4,6 +4,7 @@ using Advance_Library_Management_Application.Areas.Identity.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Advance_Library_Management_Application.Migrations.LibraryApplication
 {
     [DbContext(typeof(LibraryApplicationContext))]
-    partial class LibraryApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20231024131554_authorizationFields_03")]
+    partial class authorizationFields_03
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -1,5 +1,6 @@
 ﻿using Advance_Library_Management_Application.Data;
 using Advance_Library_Management_Application.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Advance_Library_Management_Application.Controllers
@@ -12,6 +13,8 @@ namespace Advance_Library_Management_Application.Controllers
         {
             _db = db;
         }
+
+        [Authorize]
         public IActionResult Index()
         {
             IEnumerable<Category> categoryList = _db.Categories;
@@ -19,11 +22,13 @@ namespace Advance_Library_Management_Application.Controllers
         }
 
         //GET
+        [Authorize(Roles = "Admin,Manager")]
         public IActionResult Add()
         {
             return View();
         }
-        
+
+        [Authorize(Roles = "Admin,Manager")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Add(Category obj)
@@ -47,6 +52,7 @@ namespace Advance_Library_Management_Application.Controllers
             return View(obj);
         }
 
+        [Authorize(Roles = "Admin,Manager")]
         //GET
         [HttpGet]
         public IActionResult Edit(int? id) {
@@ -62,6 +68,7 @@ namespace Advance_Library_Management_Application.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin,Manager")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Category? obj)
@@ -82,6 +89,7 @@ namespace Advance_Library_Management_Application.Controllers
         }
 
         //GET
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult Delete(int? id)
         {
@@ -105,6 +113,7 @@ namespace Advance_Library_Management_Application.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult DeletePost(int? id)
         {

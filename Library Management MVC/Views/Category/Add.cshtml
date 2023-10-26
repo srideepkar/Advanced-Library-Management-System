@@ -5,14 +5,17 @@
 
 <Center><h2>Add New Book Here..</h2></Center>
 <form method="POST">
-    <label asp-for="BookName">Enter Book name: </label>
-    <input type="text" asp-for="BookName" placeholder="New Book Name" />
+    <div class="form-group m-4">
+        <label asp-for="BookName">Enter Book name: </label>
+        <input class="form-control" type="text" asp-for="BookName" placeholder="New Book Name" />
+    </div>
+    <div class="form-check m-4">
+        <label asp-for="Available">Enter Book Status: </label>
+        <input class="form-check-input" type="checkbox" asp-for="Available" />
+    </div>
+    
+    <button type="submit" class="btn btn-primary m-4">Add The book</button>
 
-    <label asp-for="Available">Enter Book Status: </label>
-    <input type="checkbox" asp-for= "Available"/>
-        
-    <button type="submit">Add The book</button>
-
-    <a asp-action="Index" asp-controller="Category">Dashboard</a>
+    <a class="btn btn-warning" asp-action="Index" asp-controller="Category">Dashboard</a>
 </form>
 

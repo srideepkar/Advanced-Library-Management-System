@@ -5,6 +5,7 @@
 @model IEnumerable<Category>
 
 <center><h2>Welcome to the Library Managing Application Dashboard!</h2></center>
+<input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search..." aria-label="Search">
 <br />
 <br />
 <center>
@@ -25,16 +26,13 @@
             <th scope="col">
                 Last updated
             </th>
-            @if (User.IsInRole("Member"))
-            {
-                <th scope="col">
-                    Issue a Book
-                </th>
-            }
+            <th scope="col">
+                Book Details
+            </th>
             @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 <th scope="col">
-                    Edit Book Info
+                    Edit Book
                 </th>
                 <th scope="col">
                     Delete Book
@@ -55,7 +53,7 @@
                         @books.BookName
                     </td>
                     <td>
-                        @if(books.Available == "true"){
+                        @if(books.Available == true){
                                 <span>Yes</span>
                         }
                         else{
@@ -66,15 +64,23 @@
                         @{
                             TimeSpan timeDiff = currentDateTime - books.DateTime;
                         }
-                        @timeDiff.Days
-                        Days Ago
+                        @if (@timeDiff.Days == 0)
+                        {
+                            <span>Today</span>
+                        }
+                        else if (@timeDiff.Days == 1)
+                        {
+                            <span>Yesterday</span>
+                        }
+                        else
+                        {
+                            @timeDiff.Days <span>Days Ago</span>
+                        }
+                        
                     </td>
-                    @if (User.IsInRole("Member"))
-                    {
-                        <td>
-                            <a class="btn btn-primary" asp-controller="Category" asp-action="edit" asp-route-id=@books.Id> Issue </a>
-                        </td>    
-                    }
+                    <td>
+                        <a class="btn btn-primary" asp-controller="Category" asp-action="BookDetail" asp-route-id=@books.Id> Detail </a>
+                    </td>  
                     @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
                     {
                         <td>
@@ -94,3 +100,18 @@
         <a class="btn btn-success" asp-controller="Category" asp-action="Add">Add New Book!</a>
     }
 </center>
+
+
+<!-- Need to finish this part when the detail part is finished. -->
+<script>
+    document.getElementById("searchInput").addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+            performSearch(this.value);
+        }
+    });
+
+    function performSearch(query) {
+        alert("Searching for: " + query);
+        // replace this with the actual search logic
+    }
+</script>

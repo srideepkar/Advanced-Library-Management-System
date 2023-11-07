@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "BookDetail";
+    var book_detail = ViewBag.book_detail;
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>@book_detail.BookName</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <!-- This should be updated when we add the upload image functionality in category -->
+            <img src="Book-image.jpg" class="img-fluid" alt="Image will be available soon!">
+        </div>
+        <div class="col-lg-8 col-md-6 col-sm-12">
+            <p><b>Description:</b> Will be available soon!</p>
+            <p><b>Author:</b> @((book_detail.Author != null) ? book_detail.Author : "Will be available soon!")</p>
+            <p><b>Genre:</b> @((book_detail.Genre != null) ? book_detail.Genre : "Will be available soon!")</p>
+            <p><b>Series:</b> @((book_detail.Series != null) ? book_detail.Series : "Will be available soon!")</p>
+            <p><b>ISBN:</b> @((book_detail.ISBN.Length > 0) ? book_detail.ISBN : "Will be available soon!")</p>
+            <p><b>Publisher:</b> @((book_detail.Publisher != null) ? book_detail.Publisher : "Will be available soon!")</p>
+            <p><b>Availability:</b> @((book_detail.Available) ? "Yes" : "No")</p>
+            @if (User.IsInRole("Member"))
+            {
+                <button type="button" class="btn btn-primary m-4" @((book_detail.Available) ? "" : "disabled")>Issue</button>
+            }
+            else if(User.IsInRole("Manager") || User.IsInRole("Admin"))
+            {
+                <p><b>Issued By:</b> Will be available soon!</p>
+            }
+            <a class="btn btn-warning" asp-action="Index" asp-controller="Category">Dashboard</a>
+        </div>
+    </div>
+</div>

@@ -26,12 +26,6 @@ Mostly the project will be based on Dot Net 6.0 along with C# 10.0 and for few t
 - Members can pay fines
 - Members & admin both can search/filter books
 
-**Non-Functional Requirements:**
- - Scalability
- - Techstack
- - Latency
- - Consistency
-
 **High level Design**
 
 ![Library management System](https://github.com/srideepkar/Advanced-Library-Management-System/assets/54681888/bd346e36-7ecb-4a90-ba05-0f4a348f4efd)

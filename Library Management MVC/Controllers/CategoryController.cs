@@ -58,12 +58,12 @@ namespace Advance_Library_Management_Application.Controllers
         public IActionResult Edit(int? id) {
             if (ModelState.IsValid)
             {
-                var book_id = _db.Categories.Find(id);
-                if (book_id == null) 
+                var book_obj = _db.Categories.Find(id);
+                if (book_obj == null) 
                 {
                     return NotFound();
                 }
-                ViewBag.Book = book_id.BookName;
+                ViewBag.book = book_obj;
             }
             return View();
         }
@@ -89,7 +89,7 @@ namespace Advance_Library_Management_Application.Controllers
         }
 
         //GET
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Manager")]
         [HttpGet]
         public IActionResult Delete(int? id)
         {
@@ -107,13 +107,12 @@ namespace Advance_Library_Management_Application.Controllers
                         return NotFound();
                     }
                     ViewBag.BookName = book_id.BookName;
-                    ViewBag.BookAvail = book_id.Available;
                 }
             }
             return View();
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Manager")]
         [HttpPost]
         public IActionResult DeletePost(int? id)
         {
@@ -134,6 +133,22 @@ namespace Advance_Library_Management_Application.Controllers
                 }
             }
             return RedirectToAction("Index");
+        }
+
+        [Authorize(Roles = "Member,Admin,Manager")]
+        [HttpGet]
+        public IActionResult BookDetail(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                var obj = _db.Categories.Find(id);
+                if(obj == null)
+                {
+                    return BadRequest();
+                }
+                ViewBag.book_detail = obj;
+            }
+            return View();
         }
     }
 }

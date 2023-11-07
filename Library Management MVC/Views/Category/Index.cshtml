@@ -5,64 +5,113 @@
 @model IEnumerable<Category>
 
 <center><h2>Welcome to the Library Managing Application Dashboard!</h2></center>
+<input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search..." aria-label="Search">
 <br />
 <br />
 <center>
-<table>
+    <table class="table table-striped">
     <tr>
-            <th>
+            <th scope="col">
+                Index
+            </th>
+            <th scope="col">
                 ID
             </th>
-            <th>
+            <th scope="col">
                 Book Name
             </th>
-            <th>
+            <th scope="col">
                 Availability
             </th>
-            <th>
+            <th scope="col">
                 Last updated
+            </th>
+            <th scope="col">
+                Book Details
             </th>
             @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
-                <th>
-                    Edit
+                <th scope="col">
+                    Edit Book
                 </th>
-                <th>
-                    Delete
+                <th scope="col">
+                    Delete Book
                 </th>
             }
-
     </tr>
-@foreach(var books in Model)
-{
-    <tr>
-        <td>
-            @books.Id
-        </td>
-        <td>
-            @books.BookName
-        </td>
-        <td>
-            @books.Available
-        </td>
-        <td>
-            @books.DateTime
-        </td>
-                @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
-                {
-                <td>
-                    <a asp-controller="Category" asp-action="edit" asp-route-id=@books.Id> Edit </a>
-                </td>
-                <td>
-                    <a asp-controller="Category" asp-action="delete" asp-route-id=@books.Id> Delete </a>
-                </td>
-                }
-    </tr>    
-}
+        @{
+            int indx = 1;
+            DateTime currentDateTime = DateTime.Now;
+        }
+        @foreach (var books in Model)
+        {
+            <tr>
+                <th scope="row">@indx</th>
+                    <td>
+                        @books.Id
+                    <td>
+                        @books.BookName
+                    </td>
+                    <td>
+                        @if(books.Available == true){
+                                <span>Yes</span>
+                        }
+                        else{
+                                <span>No</span>
+                        }
+                    </td>
+                    <td>
+                        @{
+                            TimeSpan timeDiff = currentDateTime - books.DateTime;
+                        }
+                        @if (@timeDiff.Days == 0)
+                        {
+                            <span>Today</span>
+                        }
+                        else if (@timeDiff.Days == 1)
+                        {
+                            <span>Yesterday</span>
+                        }
+                        else
+                        {
+                            @timeDiff.Days <span>Days Ago</span>
+                        }
+                        
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" asp-controller="Category" asp-action="BookDetail" asp-route-id=@books.Id> Detail </a>
+                    </td>  
+                    @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+                    {
+                        <td>
+                            <a class="btn btn-primary" asp-controller="Category" asp-action="edit" asp-route-id=@books.Id> Edit </a>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger" asp-controller="Category" asp-action="delete" asp-route-id=@books.Id> Delete </a>
+                        </td>
+                    }
+            </tr>
+            indx++;
+        }
 
 </table>
-    @if (User.IsInRole("Admin,Manager"))
+    @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
     {
-        <a asp-controller="Category" asp-action="Add">Add New Book!</a>
+        <a class="btn btn-success" asp-controller="Category" asp-action="Add">Add New Book!</a>
     }
 </center>
+
+
+<!-- Need to finish this part when the detail part is finished. -->
+<script>
+    document.getElementById("searchInput").addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+            performSearch(this.value);
+        }
+    });
+
+    function performSearch(query) {
+        alert("Searching for: " + query);
+        // replace this with the actual search logic
+    }
+</script>
